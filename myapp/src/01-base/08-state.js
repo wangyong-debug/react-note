@@ -5,12 +5,13 @@ import React, { Component } from 'react'
 export default class App extends Component {
     state = {
         mytext : "收藏",
-        myShow : true
+        myShow : true,
+        myName : "wangyong"
     }
     render() {
         return (
         <div>
-            <h1>欢迎来到react开发</h1>
+            <h1>欢迎来到react开发 { this.state.myShow?'wangyong':'xiaoming' }</h1>
             <button onClick={ () => { this.setState({ myShow : !this.state.myShow}) } }>
                 { this.state.myShow?'收藏':'取消收藏' }
             </button>
